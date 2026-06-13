@@ -2,11 +2,17 @@ type Props = {
   eyebrow: string;
   title: string;
   description?: string;
+  className?: string;
 };
 
-export default function SectionHeading({ eyebrow, title, description }: Props) {
+export default function SectionHeading({
+  eyebrow,
+  title,
+  description,
+  className = "max-w-2xl",
+}: Props) {
   return (
-    <div className="max-w-2xl">
+    <div className={className}>
       <span className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-strong">
         {eyebrow}
       </span>

@@ -24,7 +24,7 @@ export default function Hero() {
             Full Stack Software Developer @ Griffin Global Technologies
           </span>
 
-          <h1 className="mt-6 font-serif text-3xl leading-[1.08] tracking-tight text-foreground sm:text-5xl md:text-6xl">
+          <h1 className="mt-6 font-serif text-3xl font-small leading-[1.08] tracking-tight text-foreground sm:text-5xl md:text-6xl">
             {/* Full-stack engineer building{" "}
             <span className="italic text-accent-strong">calm, reliable</span>{" "}
             software. */}
@@ -54,7 +54,7 @@ export default function Hero() {
             </a>
           </div>
 
-          <dl className="mt-12 grid max-w-md grid-cols-3 gap-6">
+          {/* <dl className="mt-12 grid max-w-md grid-cols-3 gap-6">
             {stats.map((s) => (
               <div key={s.label}>
                 <dt className="font-serif text-3xl font-medium text-foreground">
@@ -63,7 +63,7 @@ export default function Hero() {
                 <dd className="mt-1 text-sm text-subtle">{s.label}</dd>
               </div>
             ))}
-          </dl>
+          </dl> */}
         </div>
 
         <div className="relative mx-auto w-full max-w-md">

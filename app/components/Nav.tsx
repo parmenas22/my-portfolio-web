@@ -8,7 +8,7 @@ const links = [
   { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
   { label: "Experience", href: "#experience" },
-  { label: "Case Studies", href: "#case-studies" },
+  // { label: "Case Studies", href: "#case-studies" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -18,14 +18,14 @@ export default function Nav() {
   return (
     <header className="sticky top-0 z-50 border-b border-line/70 bg-background/80 backdrop-blur-md">
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-        <div className="items-center gap-2 text-sm font-medium text-foreground md:flex">
+        <div className="flex items-center gap-2 text-sm font-medium text-foreground">
         <a
           href="#top"
           className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent text-sm font-semibold tracking-tight text-background hover:bg-accent-strong"
         >
           PM
         </a>
-          <p>Parmenas Macharia</p>
+          <p className="hidden md:block">Parmenas Macharia</p>
         </div>
 
         <div className="hidden items-center gap-8 md:flex">

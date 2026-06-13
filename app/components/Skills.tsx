@@ -4,15 +4,12 @@ const groups = [
   {
     title: "Backend & APIs",
     items: [
-      "C#/.NET 9",
-      "ASP.NET Core",
+      "C#/.NET",
       "Node.js",
-      "GraphQL",
       "REST",
       "gRPC",
       "PostgreSQL",
-      "EF Core",
-    ],
+      "MongoDB"],
   },
   {
     title: "Frontend & UX",
@@ -20,37 +17,27 @@ const groups = [
       "React",
       "Next.js",
       "TypeScript",
-      "Tailwind",
-      "Radix UI",
-      "Framer Motion",
-      "Vite",
-      "Storybook",
+      "Tailwind"
     ],
   },
-  {
-    title: "Cloud & DevOps",
-    items: [
-      "Azure",
-      "AWS",
-      "Cloudflare",
-      "Docker",
-      "Kubernetes",
-      "Terraform",
-      "GitHub Actions",
-      "Datadog",
-    ],
-  },
+  // {
+  //   title: "Cloud & DevOps",
+  //   items: [
+  //     "Azure",
+  //     "AWS",
+  //     "Cloudflare",
+  //     "Docker",
+  //     "Kubernetes",
+  //     "Terraform",
+  //     "GitHub Actions",
+  //     "Datadog",
+  //   ],
+  // },
   {
     title: "AI & Data",
     items: [
       "OpenAI",
-      "LangChain",
       "RAG",
-      "Pinecone",
-      "pgvector",
-      "Whisper",
-      "Semantic Kernel",
-      "Evals",
     ],
   },
 ];
@@ -58,11 +45,11 @@ const groups = [
 export default function Skills() {
   return (
     <section id="skills" className="border-y border-line bg-card/60">
-      <div className="mx-auto max-w-6xl px-6 py-24">
+      <div className="mx-auto max-w-6xl px-6 py-8">
         <SectionHeading
           eyebrow="Skills"
-          title="The toolkit I reach for."
-          description="A pragmatic stack honed across products, teams, and scale — chosen for reliability over hype."
+          title=""
+          description=""
         />
 
         <div className="mt-12 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
