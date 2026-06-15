@@ -46,7 +46,8 @@ export default function Hero() {
               <ArrowRight className="transition-transform group-hover:translate-x-0.5" />
             </a>
             <a
-              href="#contact"
+              href="/Parmenas_Resume.pdf"
+              download="Parmenas_Resume.pdf"
               className="inline-flex h-12 items-center justify-center gap-2 rounded-full border border-line bg-card px-6 text-sm font-medium text-foreground transition-colors hover:border-foreground/30"
             >
               <Download />
