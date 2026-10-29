@@ -7,36 +7,33 @@ const groups = [
       "C#/.NET",
       "Node.js",
       "REST",
-      "gRPC",
       "PostgreSQL",
+      "SQL server",
       "MongoDB"],
   },
   {
     title: "Frontend & UX",
     items: [
       "React",
-      "Next.js",
+      "Angular",
       "TypeScript",
       "Tailwind"
     ],
   },
-  // {
-  //   title: "Cloud & DevOps",
-  //   items: [
-  //     "Azure",
-  //     "AWS",
-  //     "Cloudflare",
-  //     "Docker",
-  //     "Kubernetes",
-  //     "Terraform",
-  //     "GitHub Actions",
-  //     "Datadog",
-  //   ],
-  // },
+  {
+    title: "Cloud & Devops",
+    items: [
+      "Azure",
+      "AWS",
+      "Docker",
+      "GitHub Actions",
+    ],
+  },
   {
     title: "AI & Data",
     items: [
       "OpenAI",
+      "Azure AI Foundry",
       "RAG",
     ],
   },

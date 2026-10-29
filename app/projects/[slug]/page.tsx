@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowUpRight } from "../../components/icons";
 import { getProject, getProjectDetail, projects } from "../../data/projects";
@@ -60,22 +61,24 @@ export default async function ProjectDetailPage({ params }: PageProps) {
   }
 
   const detail = getProjectDetail(slug);
+  const technologies = detail?.metadata.technologies ?? project.tech;
+  const liveLink = detail?.metadata.links.live ?? project.url;
 
   return (
-    <section className="mx-auto max-w-3xl px-6 py-24">
-      <a
+    <section className="mx-auto max-w-5xl px-5 py-12 sm:px-6 sm:py-16">
+      <Link
         href="/#projects"
         className="text-sm font-medium text-subtle transition-colors hover:text-foreground"
       >
         ← Back to projects
-      </a>
+      </Link>
 
-      <h1 className="mt-8 font-serif text-4xl font-medium tracking-tight text-foreground sm:text-5xl">
+      <h1 className="mt-6 font-serif text-4xl font-medium tracking-tight text-foreground sm:text-5xl">
         {project.name}
       </h1>
 
-      <div className="mt-6 flex flex-wrap gap-2">
-        {project.tech.map((t) => (
+      <div className="mt-4 flex flex-wrap gap-2">
+        {technologies.map((t) => (
           <span
             key={t}
             className="rounded-full border border-line bg-card px-2.5 py-1 text-xs font-medium text-muted"
@@ -86,28 +89,20 @@ export default async function ProjectDetailPage({ params }: PageProps) {
       </div>
 
       {detail ? (
-        <div className="mt-12 space-y-12">
+        <div className="mt-8 space-y-8">
           <div>
             <SectionTitle>Overview</SectionTitle>
-            <p className="mt-4 text-lg leading-relaxed text-muted">
+            <p className="mt-3 text-lg leading-relaxed text-muted">
               {detail.overview}
             </p>
           </div>
 
           <div>
             <SectionTitle>Problem</SectionTitle>
-            <p className="mt-4 text-[15px] leading-relaxed text-muted">
+            <p className="mt-3 text-[15px] leading-relaxed text-muted">
               {detail.problem.intro}
             </p>
             <BulletList items={detail.problem.points} />
-          </div>
-
-          <div>
-            <SectionTitle>My Role</SectionTitle>
-            <p className="mt-4 text-base font-medium text-foreground">
-              {detail.role.title}
-            </p>
-            <BulletList items={detail.role.points} />
           </div>
 
           <div>
@@ -116,37 +111,39 @@ export default async function ProjectDetailPage({ params }: PageProps) {
           </div>
 
           <div>
-            <SectionTitle>Challenges</SectionTitle>
-            <BulletList items={detail.challenges} />
-          </div>
-
-          <div>
-            <SectionTitle>Solution</SectionTitle>
-            <p className="mt-4 text-[15px] leading-relaxed text-muted">
-              {detail.solution}
+            <SectionTitle>My Role</SectionTitle>
+            <p className="mt-3 text-base font-medium text-foreground">
+              {detail.role.title}
             </p>
+            <p className="mt-2 text-[15px] leading-relaxed text-muted">
+              {detail.role.summary}
+            </p>
+            <BulletList items={detail.role.points} />
           </div>
 
           <div>
             <SectionTitle>Results</SectionTitle>
-            <BulletList items={detail.results} />
+            <BulletList items={detail.results.delivered} />
+            <p className="mt-4 text-[15px] leading-relaxed text-muted">
+              {detail.results.impact}
+            </p>
           </div>
         </div>
       ) : (
-        <p className="mt-12 text-lg leading-relaxed text-muted">
+        <p className="mt-8 text-lg leading-relaxed text-muted">
           {project.description}
         </p>
       )}
 
-      {project.url && (
-        <div className="mt-12 border-t border-line pt-8">
+      {liveLink && (
+        <div className="mt-8 border-t border-line pt-6">
           <a
-            href={project.url}
+            href={liveLink}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1 text-sm font-medium text-accent-strong transition-colors hover:text-foreground"
           >
-            Visit site
+            Visit live app
             <ArrowUpRight />
           </a>
         </div>

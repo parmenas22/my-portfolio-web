@@ -44,12 +44,12 @@ export default function Projects() {
             </div>
 
             <div className="mt-6 flex items-center gap-2 border-t border-line pt-5">
-              <span className="text-xs uppercase tracking-wide text-subtle">
+              {/* <span className="text-xs uppercase tracking-wide text-subtle">
                 Result
               </span>
               <span className="text-sm font-semibold text-accent-strong">
                 {p.result}
-              </span>
+              </span> */}
               {p.url && (
                 <a
                   href={p.url}

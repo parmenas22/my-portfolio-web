@@ -22,7 +22,7 @@ export default function Footer() {
               PM
             </a>
             <p className="mt-4 text-sm leading-relaxed text-muted">
-              Full-stack engineer building calm, reliable software.</p>
+              Full-stack engineer building quality, reliable software.</p>
             <div className="mt-5 flex items-center gap-3">
               {[
                 { icon: Github, href: "https://github.com/parmenas22", label: "GitHub" },
@@ -55,7 +55,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col gap-2 border-t border-line pt-6 text-xs text-subtle sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} Parmenas Macharia. Crafted with care.</p>
+          <p>© {new Date().getFullYear()} Parmenas Macharia.</p>
           {/* <p>v1.0 — placeholder content, easy to edit.</p> */}
         </div>
       </div>

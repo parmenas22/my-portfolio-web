@@ -21,14 +21,14 @@ export default function Hero() {
         <div>
           <span className="inline-flex items-center gap-2 rounded-full border border-line bg-card px-3 py-1 text-xs font-medium text-muted">
             <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-            Full Stack Software Developer @ Griffin Global Technologies
+            Software Developer
           </span>
 
           <h1 className="mt-6 font-serif text-3xl font-small leading-[1.08] tracking-tight text-foreground sm:text-5xl md:text-6xl">
             {/* Full-stack engineer building{" "}
             <span className="italic text-accent-strong">calm, reliable</span>{" "}
             software. */}
-            Parmenas Macharia — Full-stack Developer
+            Parmenas Macharia — Software Developer
           </h1>
 
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted">
